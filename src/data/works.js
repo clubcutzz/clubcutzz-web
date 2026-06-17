@@ -2,7 +2,7 @@ const works = [
   {
     title: "AYYBO — Danzeria",
     meta: "Montevideo · Uruguay",
-    video: "/work/ayybo.mp4",
+    video: "https://pub-9ed42f7fce6c47ceb394ecb509f1d6ee.r2.dev/ayybo.mp4",
   },
   {
     title: "HUB — Montevideo",
@@ -12,7 +12,7 @@ const works = [
   {
     title: "Facu Baez — Warm Up",
     meta: "Multicam shoot",
-    video: "/work/facu-baez.mp4",
+    video: "https://pub-9ed42f7fce6c47ceb394ecb509f1d6ee.r2.dev/facubaez.mp4",
   },
 ]
 

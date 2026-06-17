@@ -1,14 +1,17 @@
 function Hero() {
   return (
     <section className="relative flex h-screen items-center justify-center overflow-hidden px-6">
-      <video
-        className="absolute inset-0 h-full w-full object-cover opacity-45"
-        src="/videos/hero.mp4"
+            <video
         autoPlay
         muted
         loop
         playsInline
-      />
+      >
+        <source
+          src="https://pub-9ed42f7fce6c47ceb394ecb509f1d6ee.r2.dev/hero.mp4"
+          type="video/mp4"
+        />
+      </video>
 
       <div className="absolute inset-0 bg-black/55" />
 
