@@ -1,0 +1,18 @@
+# Dependencias
+node_modules
+
+# Build
+dist
+
+# Archivos del sistema
+.DS_Store
+
+# Videos pesados
+public/videos/
+public/work/
+
+# Archivos multimedia
+*.mp4
+*.mov
+*.m4v
+*.avi
