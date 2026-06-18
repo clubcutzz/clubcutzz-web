@@ -11,7 +11,7 @@ function Contact() {
 
       <div className="mt-10 flex flex-col gap-4 text-neutral-300">
         <a href="mailto:hello@clubcutzz.com" className="text-2xl hover:text-white">
-          hello@clubcutzz.com
+          bookings@clubcutzz.com
         </a>
 
         <a

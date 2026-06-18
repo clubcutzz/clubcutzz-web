@@ -16,6 +16,27 @@
   );
 }
 
+/* Chrome, Edge y Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE/Edge antiguos */
+body {
+  -ms-overflow-style: none;
+}
+
+html,
+body,
+#root {
+  background-color: #000;
+}
+
 .marquee-track {
   display: flex;
   width: max-content;

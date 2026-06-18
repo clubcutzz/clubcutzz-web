@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom"
 import { works } from "../data/works"
 import BackTransitionLink from "../components/BackTransitionLink"
+import WhatsAppButton from "../components/WhatsAppButton"
 
 function ProjectPage() {
   const { slug } = useParams()
@@ -122,6 +123,7 @@ function ProjectPage() {
     </div>
   </section>
 )}
+  <WhatsAppButton />
 
     </main>
   )

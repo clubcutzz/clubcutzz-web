@@ -12,6 +12,8 @@ import Footer from "./components/Footer"
 import ProjectPage from "./pages/ProjectPage"
 import Loader from "./components/Loader"
 import ScrollToTop from "./components/ScrollToTop"
+import WhatsAppButton from "./components/WhatsAppButton"
+import PageFade from "./components/PageFade"
 
 function HomePage() {
   return (
@@ -23,6 +25,8 @@ function HomePage() {
       <About />
       <Contact />
       <Footer />
+      <WhatsAppButton />
+
     </>
   )
 }
@@ -47,10 +51,25 @@ function App() {
   </AnimatePresence>
 
   {!loading && (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/work/:slug" element={<ProjectPage />} />
-    </Routes>
+  <Routes>
+  <Route
+    path="/"
+    element={
+      <PageFade>
+        <HomePage />
+      </PageFade>
+    }
+  />
+
+  <Route
+    path="/work/:slug"
+    element={
+      <PageFade>
+        <ProjectPage />
+      </PageFade>
+    }
+  />
+</Routes>
   )}
 </>
   )
