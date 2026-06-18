@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom"
 import { works } from "../data/works"
+import BackTransitionLink from "../components/BackTransitionLink"
 
 function ProjectPage() {
   const { slug } = useParams()
@@ -33,12 +34,12 @@ function ProjectPage() {
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/55 to-black/90" />
 
-        <Link
-          to="/"
-          className="absolute left-6 top-6 z-20 rounded-full border border-white/20 bg-black/30 px-5 py-2 text-sm text-white backdrop-blur transition hover:bg-white hover:text-black"
-        >
-          ← Back
-        </Link>
+      <BackTransitionLink
+  to="/"
+  className="absolute left-6 top-6 z-20 rounded-full border border-white/20 bg-black/30 px-5 py-2 text-sm text-white backdrop-blur transition hover:bg-white hover:text-black"
+>
+  ← Back
+</BackTransitionLink>
 
         <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
           <p className="mb-6 text-xs uppercase tracking-[0.5em] text-neutral-400">

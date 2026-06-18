@@ -11,6 +11,7 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import ProjectPage from "./pages/ProjectPage"
 import Loader from "./components/Loader"
+import ScrollToTop from "./components/ScrollToTop"
 
 function HomePage() {
   return (
@@ -38,18 +39,20 @@ function App() {
   }, [])
 
   return (
-    <>
-      <AnimatePresence mode="wait">
-        {loading && <Loader key="loader" />}
-      </AnimatePresence>
+<>
+  <ScrollToTop />
 
-      {!loading && (
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/work/:slug" element={<ProjectPage />} />
-        </Routes>
-      )}
-    </>
+  <AnimatePresence mode="wait">
+    {loading && <Loader key="loader" />}
+  </AnimatePresence>
+
+  {!loading && (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/work/:slug" element={<ProjectPage />} />
+    </Routes>
+  )}
+</>
   )
 }
 

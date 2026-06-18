@@ -1,5 +1,6 @@
 import { works } from "../data/works"
 import { Link } from "react-router-dom"
+import TransitionLink from "./TransitionLink"
 
 function FeaturedWork() {
   return (
@@ -49,12 +50,12 @@ function FeaturedWork() {
         {work.subtitle}
       </p>
 
-      <Link
+      <TransitionLink
   to={`/work/${work.slug}`}
   className="mt-4 inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium backdrop-blur transition hover:bg-white hover:text-black"
 >
-  View Project
-</Link>
+  View Project →
+</TransitionLink>
     </div>
 
   </div>
