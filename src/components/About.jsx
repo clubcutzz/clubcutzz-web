@@ -14,11 +14,11 @@ function About() {
         </div>
 
         <div>
-          <p className="mb-4 text-xs uppercase tracking-[0.4em] text-neutral-500">
+          <p className="mb-4 text-xs uppercase tracking-[0.4em] text-white text-neutral-500">
             About
           </p>
 
-          <h2 className="text-4xl font-semibold leading-tight md:text-5xl">
+          <h2 className="text-4xl font-semibold leading-tight text-white md:text-5xl">
             We don't just film DJ sets.
             <br />
             We document electronic culture.

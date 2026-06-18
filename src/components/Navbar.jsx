@@ -2,7 +2,7 @@ function Navbar() {
   return (
     <header className="fixed left-0 top-0 z-50 w-full px-6 py-5">
       <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-black/30 px-5 py-3 backdrop-blur-md">
-        <a href="#" className="text-sm font-bold tracking-[0.35em]">
+        <a href="/" className="text-white font-bold tracking-[0.35em]">
           CLUBCUTZZ
         </a>
 
