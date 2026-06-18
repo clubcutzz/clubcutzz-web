@@ -1,14 +1,16 @@
+import { useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
 
-import Navbar from "./components/Navbar.jsx"
-import Hero from "./components/Hero.jsx"
-import CollaborationsMarquee from "./components/CollaborationsMarquee.jsx"
-import FeaturedWork from "./components/FeaturedWork.jsx"
-import About from "./components/About.jsx"
-import Contact from "./components/Contact.jsx"
-import Footer from "./components/Footer.jsx"
-
-import ProjectPage from "./pages/ProjectPage.jsx"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import CollaborationsMarquee from "./components/CollaborationsMarquee"
+import FeaturedWork from "./components/FeaturedWork"
+import About from "./components/About"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
+import ProjectPage from "./pages/ProjectPage"
+import Loader from "./components/Loader"
 
 function HomePage() {
   return (
@@ -25,11 +27,29 @@ function HomePage() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1800)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/work/:slug" element={<ProjectPage />} />
-    </Routes>
+    <>
+      <AnimatePresence mode="wait">
+        {loading && <Loader key="loader" />}
+      </AnimatePresence>
+
+      {!loading && (
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/work/:slug" element={<ProjectPage />} />
+        </Routes>
+      )}
+    </>
   )
 }
 
